@@ -1,0 +1,189 @@
+html, body {
+    height: 100%; 
+    margin: 0; 
+    
+} 
+
+body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    background: url("https://www.toptal.com/designers/subtlepatterns/patterns/use_your_illusion.png"); 
+} 
+
+#field { 
+    position: relative;
+    width: 600px; 
+    height: 600px; 
+    background-color: ; 
+    border-radius: 10px; 
+    padding-bottom: 50px;
+    
+} 
+
+.field__cell--null { 
+    position: absolute;
+    width: 125px; 
+    height: 125px; 
+} 
+
+.field__cell { 
+    position: absolute; 
+    width: 125px; 
+    height: 125px; 
+} 
+
+.field__cell--tile {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    font-size: 40px; 
+    font-family: monospace;
+    transition: 0.55s; 
+    background: rgba(210, 121, 166, 0.28); 
+} 
+
+#modal {
+    height: 100%; 
+    width: 100%; 
+    border-radius: inherit; 
+    
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 1s ease; 
+    
+    position: relative; 
+    z-index: 1; 
+    
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+    
+    background: rgba(0, 0, 0, 0.68); 
+    
+    color: white; 
+    
+} 
+
+#modal span {
+    font-size: 70px;   
+}
+
+#modal.modal--visible {
+    visibility: visible; 
+    opacity: 1;
+} 
+
+#rerun {
+    width: 200px; 
+    height: 50px; 
+    position: relative; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 38px; 
+    padding: 0 30px; 
+    margin: 15px; 
+    background-color: rgba(178,178,178, 0); 
+    border: 0;
+    color: white; 
+    cursor: pointer;
+} 
+
+#rerun p {
+    margin: 0;
+} 
+
+#rerun img {
+    width 32px; 
+    height: 32px; 
+    transition: 0.7s;
+} 
+
+#rerun:hover img {
+    transform: rotate(360deg); 
+    transition: 0.9s;
+}
+
+
+/*effect-box*/
+#rerun:after,
+#rerun:before {
+	content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition:opacity 0.35s, -webkit-transform 0.35s;
+	transition:opacity 0.35s, transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+	
+}
+
+#rerun:before {
+  border-left: 1px solid white;
+  border-right: 1px solid;
+  -webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+#rerun:after {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  -webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+#rerun:hover:after,
+#rerun:hover:before {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+} 
+
+.info { 
+    width: 600px; 
+    height: 100px;
+    display: flex; 
+    justify-content: space-between;    
+} 
+
+.info h1 {
+    background-image: url(https://im0-tub-ru.yandex.net/i?id=9759e700b7895caccdb7802a9d7c9dc1-l&n=13);
+    font-weight: bold;
+    text-align: center;
+    color: white; // fallback
+    user-select: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 62px; 
+    -webkit-font-smoothing: antialiased; 
+    height: 60px; 
+    padding-left: 20px; 
+    margin: 0; 
+    margin-top: 35px;
+} 
+
+.info h2 {
+   background-image: url(https://im0-tub-ru.yandex.net/i?id=9759e700b7895caccdb7802a9d7c9dc1-l&n=13);
+    font-weight: bold;
+    text-align: center;
+    color: white; // fallback
+    user-select: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-size: 62px;  
+    -webkit-font-smoothing: antialiased; 
+    height: 60px; 
+    padding-right: 20px; 
+    margin: 0; 
+    margin-top: 35px;
+    
+}
