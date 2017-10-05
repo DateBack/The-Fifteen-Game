@@ -144,7 +144,7 @@ function between (a, b, t) {
 } 
 
 function shuffleTiles() { 
-    for (var i = 0; i < 5; ++i) { 
+    for (var i = 0; i < 1000000; ++i) { 
         var a = Math.floor(Math.random() * tiles.length); 
         tiles[a].click(); 
     }
